@@ -25,6 +25,7 @@ import DetailTop from "./FptShop/components/DetailTop";
 import HighlightFeature from "./FptShop/features/HighlightFeature";
 import ProductHighlightDetail from "./FptShop/components/ProductHighlightDetail";
 import SearchProduct from "./FptShop/components/SearchProduct";
+
 function App() {
   // const [showModal, setShowModal] = useState(false);
   return (

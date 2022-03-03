@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import Header from "../components/Header";
+import { Link } from "react-router-dom";
 
 const Checkout = () => {
   const state = useSelector((state) => state.handleCart);
@@ -50,7 +51,7 @@ const Checkout = () => {
     resolver: yupResolver(CartSchema),
   });
   const onSubmit = () => {
-    alert(JSON.stringify(data));
+    // alert(JSON.stringify(data));
   };
   return (
     <>
@@ -157,12 +158,14 @@ const Checkout = () => {
             )}
           </div>
           <div className="top-[350px] left-[690px] absolute ">
-            <button
-              className="w-[259px] h-[54px] text-[#FFFFFF] text-[20px] bg-[#CB1C22] p-4 absolute left-[220px]"
-              type="submit"
-            >
-              HOÀN TẤT ĐẶT HÀNG
-            </button>
+            <Link to="/success">
+              <button
+                className="w-[259px] h-[54px] text-[#FFFFFF] text-[20px] bg-[#CB1C22] p-4 absolute left-[220px]"
+                type="submit"
+              >
+                HOÀN TẤT ĐẶT HÀNG
+              </button>
+            </Link>
             <p className="w-[776px] h-[20px] text-[#939CA3] text-[14px] absolute top-[158px] left-[100px] font-semibold">
               {" "}
               Bằng cách đặt hàng, bạn đồng ý với Điều khoản sử dụng của FPTShop{" "}

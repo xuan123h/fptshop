@@ -117,16 +117,12 @@ const Header = () => {
     getProduct();
   }, []);
   const Loading = () => {
-    return <div className="absolute ml-[450px]">Loading ...</div>;
+    return <div className="absolute ml-[450px]"></div>;
   };
   const ShowProduct = () => {
     return (
       <>
-        <ul
-          className={`text-red-600 absolute z-50 w-[620px] h-[1000px] top-[40px] flex items-center flex-wrap border border-white bg-white shadow-slate-400 ${
-            loading ? "opacity-0, invisible" : "opacity-100,visible"
-          }`}
-        >
+        <ul className="text-red-600 absolute z-50 w-[620px] h-[1000px] top-[40px] flex items-center flex-wrap border border-white bg-white shadow-slate-400">
           {product
             .filter((val) => {
               if (searchProduct == "") {
@@ -144,7 +140,7 @@ const Header = () => {
             ))}
         </ul>
 
-        <button className="absolute ml-[550px] font-bold  mt-[1999px] z-50">
+        <button className="absolute ml-[550px] font-bold  mt-[1999px] z-50 ">
           {" "}
           Close{" "}
         </button>
@@ -171,14 +167,14 @@ const Header = () => {
                 type="text"
                 placeholder="Nhập tên điện thoại, máy tính, phụ kiện... cần tìm "
                 className="pl-4 w-[540px] h-[38px] border-none rounded-sm outline-none font-bold"
+                onClick={loading ? <Loading /> : <ShowProduct />}
                 onChange={(event) => {
                   setSearchProduct(event.target.value);
                 }}
-                onClick={() => setLoading(true)}
               />
               {/* {loading ? <Loading /> : <ShowProduct />} */}
 
-              <li className="list-none translate-x-6 w-[58px] h-[38px] border border-black bg-black text-white flex items-center justify-center">
+              <li className="list-none translate-x-6 w-[58px] h-[38px] border border-black bg-black text-white flex items-center justify-center cursor-pointer">
                 {" "}
                 <FaSearch />{" "}
               </li>
@@ -188,7 +184,7 @@ const Header = () => {
                 {" "}
                 <FaBook />{" "}
               </li>
-              {/* <li className="text-sm"> Thông tin hay </li> */}
+
               <HtmlTooltip
                 title={
                   <React.Fragment>
@@ -224,7 +220,7 @@ const Header = () => {
                 </li>
               </div>
               <div className="">
-                <li className="text-sm w-[132px] text-white mt-[1px]">
+                <li className="text-sm w-[132px] text-white mt-[1px] cursor-pointer">
                   {" "}
                   Thu hộ điện , nước{" "}
                 </li>
