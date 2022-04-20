@@ -34,20 +34,20 @@ const Modal = ({ open = false, handleClose = () => {} }) => {
   };
   return (
     <div className="list-none mt-[100px] ml-[1700px]">
-      <div className="absolute ml-[30px] top-[8140px]">
+      <div className="absolute ml-[30px] top-[7433px]">
         <li>
           {" "}
           <FaCircle />{" "}
         </li>
       </div>
-      <div className="w-[136px] h-[65px] bg-red-600 rounded-[8px] absolute top-[8060px] ml-[10px]">
+      <div className="w-[136px] h-[65px] bg-red-600 rounded-[8px] absolute top-[7360px] ml-[10px]">
         <li className="text-[#FFFFFF] text-[15px] h-[36px] w-[136px] ml-[8px] mt-[10px]">
           {" "}
           Trò chuyện cùng FPT Shop{" "}
         </li>
       </div>
       <div
-        className="absolute top-[8060px] ml-[143px] rounded-full"
+        className="absolute top-[7360px] ml-[143px] rounded-full"
         onClick={handleClose}
       >
         <span>
@@ -58,7 +58,7 @@ const Modal = ({ open = false, handleClose = () => {} }) => {
       <form
         className={`absolute w-[346px] h-[375px] border border-gray-600 bg-blue-600 ${
           open ? "" : "opacity-0 invisible"
-        } top-[7760px] left-[1530px]`}
+        } top-[7050px] left-[1530px]`}
         onSubmit={handleSubmit(onSubmit)}
       >
         <h4 className="w-[305px] h-[46px] text-[#FFFFFF] text-[16px] mt-[20px] ml-[20px]">

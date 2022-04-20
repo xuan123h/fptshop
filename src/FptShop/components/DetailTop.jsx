@@ -9,17 +9,6 @@ import {
   // FaTrash,
 } from "react-icons/fa";
 import Slider from "react-slick";
-
-// Modal
-// import Box from "@mui/material/Box";
-// import Modal from "@mui/material/Modal";
-// import Button from "@mui/material/Button";
-// import { Typography } from "@mui/material";
-
-// react-hook-form
-// import { useForm } from "react-hook-form";
-// import { yupResolver } from "@hookform/resolvers/yup";
-// import * as yup from "yup";
 import { useParams } from "react-router-dom";
 import DetailBetween from "./DetailBetween";
 import Header from "./Header";
@@ -33,64 +22,7 @@ import { addCart } from "../redux/action";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-// const CartSchema = yup.object().shape({
-//   username: yup
-//     .string()
-//     .required("Please enter your mobilephone")
-//     .max(15, "Must be 15 characters or less"),
-//   // age: yup.number().required().positive().integer(),
-//   mobilephone: yup
-//     .string()
-//     .required("Please enter your password")
-//     .max(20, "Must be 20 characters or less"),
-//   email: yup.string().required("Please enter your email"),
-// });
-// const style = {
-//   position: "absolute",
-//   top: "50%",
-//   left: "50%",
-//   transform: "translate(-50%, -50%)",
-//   width: 400,
-//   bgcolor: "background.paper",
-//   color: "primary",
-//   border: "2px solid #000",
-//   boxShadow: 24,
-//   pt: 2,
-//   px: 4,
-//   pb: 3,
-// };
-
 const DetailTop = () => {
-  // const [totalCart, setTotalCart] = useState(33990000);
-  // const [quantity, setQuantity] = useState(1);
-  // const removeToCart = () => {
-  //   if (quantity <= 1) return;
-  //   const newQuantity = quantity - 1;
-  //   setQuantity(newQuantity);
-  // };
-  // const addToCart = () => {
-  //   const newQuantity = quantity + 1;
-  //   setQuantity(newQuantity);
-  // };
-  // use react-hook-form
-  // const {
-  //   register,
-  //   handleSubmit,
-  //   formState: { errors },
-  // } = useForm({
-  //   resolver: yupResolver(CartSchema),
-  // });
-  // const onSubmit = () => {
-  //   // alert(JSON.stringify(data));
-  // };
-
-  // const [open, setOpen] = React.useState(false);
-  // const handleOpen = () => {
-  //   setOpen(true);
-  // };
-  // const handleClose = () => {
-  //   setOpen(false);
-  // };
   var settings = {
     dots: true,
     infinite: true,
@@ -112,9 +44,6 @@ const DetailTop = () => {
       draggable: true,
       progress: undefined,
     });
-  // api
-  // https://61dba40d4593510017aff960.mockapi.io/user
-  // const [data, setData] = useState([]);
   const [product, setProduct] = useState([]);
   const [loading, setLoading] = useState(false);
   const { id } = useParams();
@@ -201,41 +130,41 @@ const DetailTop = () => {
           </div>
           <div className="flex items-center">
             <div>
-              <div className="absolute w-[600px] top-[140px] ml-[60px]">
+              <div className="absolute w-[600px] top-[140px] ml-[20px]">
                 <Slider {...settings}>
                   <div>
                     <img
                       src={product.image01}
                       alt={product.name}
-                      className="w-[400px] h-[400px]"
+                      className="w-full h-[400px] object-contain"
                     />
                   </div>
                   <div>
                     <img
                       src={product.image02}
                       alt={product.name}
-                      className="w-[400px] h-[400px]"
+                      className="w-full h-[400px] object-contain"
                     />
                   </div>
                   <div>
                     <img
                       src={product.image03}
                       alt={product.name}
-                      className="w-[400px] h-[400px]"
+                      className="w-full h-[400px] object-contain"
                     />
                   </div>
                   <div>
                     <img
                       src={product.image04}
                       alt={product.name}
-                      className="w-[400px] h-[400px]"
+                      className="w-full h-[400px] object-contain"
                     />
                   </div>
                   <div>
                     <img
                       src={product.image05}
                       alt={product.name}
-                      className="w-[400px] h-[400px]"
+                      className="w-full h-[400px] object-contain"
                     />
                   </div>
                 </Slider>
@@ -368,7 +297,7 @@ const DetailTop = () => {
                 </div>
               </div>
             </div>
-            <div className="absolute top-[330px] left-[650px] flex items-center ">
+            <div className="absolute top-[330px] left-[670px] flex items-center ">
               <div>
                 <img
                   src={product.color01}

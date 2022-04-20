@@ -15,6 +15,7 @@ import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 import Button from "@mui/material/Button";
 import { Typography } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 import { styled } from "@mui/material/styles";
 import Tooltip, { tooltipClasses } from "@mui/material/Tooltip";
@@ -59,7 +60,6 @@ const SignupSchema = yup.object().shape({
     .string()
     .required("Please enter your mobilephone")
     .max(15, "Must be 15 characters or less"),
-  // age: yup.number().required().positive().integer(),
   password: yup
     .string()
     .required("Please enter your password")
@@ -72,6 +72,7 @@ const SignupSchema = yup.object().shape({
 });
 const Header = () => {
   // use react-hook-form
+  const navigate = useNavigate();
   const {
     register,
     handleSubmit,
@@ -81,6 +82,7 @@ const Header = () => {
   });
   const onSubmit = (data) => {
     alert(JSON.stringify(data));
+    //  navigate("/");
   };
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => {
@@ -97,7 +99,7 @@ const Header = () => {
   const [data, setData] = useState([]);
   const [product, setProduct] = useState(data);
   const [loading, setLoading] = useState(false);
-  let ComponentMounted = true;
+  let componentMounted = true;
 
   useEffect(() => {
     const getProduct = async () => {
@@ -105,19 +107,19 @@ const Header = () => {
       const response = await fetch(
         "https://61dba40d4593510017aff960.mockapi.io/product"
       );
-      if (ComponentMounted) {
+      if (componentMounted) {
         setData(await response.clone().json());
         setProduct(await response.json());
         setLoading(false);
       }
       return () => {
-        ComponentMounted = false;
+        componentMounted = false;
       };
     };
     getProduct();
   }, []);
   const Loading = () => {
-    return <div className="absolute ml-[450px]"></div>;
+    return <div className="absolute ml-[450px]"> Loading ... </div>;
   };
   const ShowProduct = () => {
     return (
@@ -139,7 +141,6 @@ const Header = () => {
               </li>
             ))}
         </ul>
-
         <button className="absolute ml-[550px] font-bold  mt-[1999px] z-50 ">
           {" "}
           Close{" "}
@@ -167,13 +168,11 @@ const Header = () => {
                 type="text"
                 placeholder="Nhập tên điện thoại, máy tính, phụ kiện... cần tìm "
                 className="pl-4 w-[540px] h-[38px] border-none rounded-sm outline-none font-bold"
-                onClick={loading ? <Loading /> : <ShowProduct />}
                 onChange={(event) => {
                   setSearchProduct(event.target.value);
                 }}
               />
               {/* {loading ? <Loading /> : <ShowProduct />} */}
-
               <li className="list-none translate-x-6 w-[58px] h-[38px] border border-black bg-black text-white flex items-center justify-center cursor-pointer">
                 {" "}
                 <FaSearch />{" "}
@@ -438,7 +437,6 @@ const Header = () => {
                         <input
                           type="text"
                           placeholder="Họ Tên"
-                          className="w-[305px] h-[40px] bg-[#FFFFFF]"
                           className="w-[380px] h-[50px] bg-[#FFFFFF] outline-none border border-green-500 pl-3 mt-[14px] pt-0"
                           {...register("username")}
                         />

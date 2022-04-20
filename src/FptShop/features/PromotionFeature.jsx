@@ -4,8 +4,6 @@ import { FaCertificate } from "react-icons/fa";
 import ProductFetch2 from "../components/ProductFetch2";
 
 const PromotionFeature = () => {
-  // api
-  // https://61dba40d4593510017aff960.mockapi.io/user
   const [data, setData] = useState([]);
   const [products, setProducts] = useState(data);
   const [loading, setLoading] = useState(false);

@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="relative flex items-center list-none mt-[2830px] ml-[331px] h-[283px] border border-white bg-white w-[1276px] ">
+    <div className="relative flex items-center list-none mt-[2130px] ml-[331px] h-[283px] border border-white bg-white w-[1276px] ">
       <div className="absolute top-[50px] left-[15px] text-orange-700 text-[14px]">
         <li> Giới thiệu về công ty </li>
         <li className="mt-[10px]"> Câu hỏi thường gặp mua hàng </li>

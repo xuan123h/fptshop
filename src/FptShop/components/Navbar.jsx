@@ -11,7 +11,6 @@ import {
   FaPercent,
   FaStar,
 } from "react-icons/fa";
-import Button from "@mui/material/Button";
 import { styled } from "@mui/material/styles";
 import Tooltip, { tooltipClasses } from "@mui/material/Tooltip";
 import Typography from "@mui/material/Typography";
@@ -31,8 +30,8 @@ const HtmlTooltip = styled(({ className, ...props }) => (
 const Navbar = () => {
   return (
     <div className="relative bg-[#252525] h-9 flex items-center list-none">
-      <div className="flex items-center text-gray-300 absolute ml-[310px]">
-        <li>
+      <div className="flex items-center text-white absolute ml-[310px]">
+        <li className="cursor-pointer">
           {" "}
           <FaMobile />{" "}
         </li>
@@ -122,14 +121,14 @@ const Navbar = () => {
             </React.Fragment>
           }
         >
-          <Button className="ml-2 mt-1 text-sm" color="inherit">
+          <li className="text-white text-sm ml-2 mt-1 cursor-pointer">
             {" "}
             ĐIỆN THOẠI{" "}
-          </Button>
+          </li>
         </HtmlTooltip>
       </div>
-      <div className="flex items-center text-gray-300 absolute ml-[440px]">
-        <li>
+      <div className="flex items-center text-white absolute ml-[440px]">
+        <li className="cursor-pointer">
           {" "}
           <FaLaptop />{" "}
         </li>
@@ -201,14 +200,14 @@ const Navbar = () => {
             </React.Fragment>
           }
         >
-          <Button className="ml-2 mt-1 text-sm" color="inherit">
+          <li className="text-white text-sm ml-2 mt-1 cursor-pointer">
             {" "}
             LAPTOP{" "}
-          </Button>
+          </li>
         </HtmlTooltip>
       </div>
-      <div className="flex items-center text-gray-300 absolute ml-[545px]">
-        <li>
+      <div className="flex items-center text-white absolute ml-[545px]">
+        <li className="cursor-pointer">
           {" "}
           <FaAppleAlt />{" "}
         </li>
@@ -288,22 +287,20 @@ const Navbar = () => {
             </React.Fragment>
           }
         >
-          <Button className="ml-2 mt-1 text-sm" color="inherit">
+          <li className="text-white text-sm ml-2 mt-1 cursor-pointer">
             {" "}
             APPLE{" "}
-          </Button>
+          </li>
         </HtmlTooltip>
       </div>
-      <div className="flex items-center text-gray-300 absolute ml-[650px]">
-        <li>
+      <div className="flex items-center text-white absolute ml-[650px]">
+        <li className="cursor-pointer">
           {" "}
           <FaDesktop />{" "}
         </li>
-
         <HtmlTooltip
           title={
             <React.Fragment>
-              {/* <Typography color="inherit">Tooltip with HTML</Typography> */}
               <div className="list-none text-center text-[16px] bg-white">
                 <li> PC </li>
                 <li> Linh kiện </li>
@@ -313,14 +310,14 @@ const Navbar = () => {
             </React.Fragment>
           }
         >
-          <Button className="ml-2 mt-1 text-sm" color="inherit">
+          <li className="text-white text-sm ml-2 mt-1 cursor-pointer">
             {" "}
             PC - LINH KIỆN{" "}
-          </Button>
+          </li>
         </HtmlTooltip>
       </div>
-      <div className="flex items-center text-gray-300 absolute ml-[810px]">
-        <li>
+      <div className="flex items-center text-white absolute ml-[810px]">
+        <li className="cursor-pointer">
           {" "}
           <FaHeadphones />{" "}
         </li>
@@ -410,23 +407,17 @@ const Navbar = () => {
             </React.Fragment>
           }
         >
-          <Button className="ml-2 mt-1 text-sm" color="inherit">
+          <li className="text-white text-sm ml-2 mt-1 cursor-pointer">
             {" "}
             PHỤ KIỆN{" "}
-          </Button>
+          </li>
         </HtmlTooltip>
       </div>
-      <div className="flex items-center text-gray-300 absolute ml-[930px]">
-        <li>
+      <div className="flex items-center text-white absolute ml-[930px]">
+        <li className="cursor-pointer">
           {" "}
           <FaArrowRight />{" "}
         </li>
-        {/* <Tooltip title={longText}>
-          <Button className="ml-2 mt-1 text-sm" color="inherit">
-            {" "}
-            MÁY CŨ GIÁ RẺ{" "}
-          </Button>
-        </Tooltip> */}
         <HtmlTooltip
           title={
             <React.Fragment>
@@ -513,23 +504,17 @@ const Navbar = () => {
             </React.Fragment>
           }
         >
-          <Button className="ml-2 mt-1 text-sm" color="inherit">
+          <li className="text-white text-sm ml-2 mt-1 cursor-pointer">
             {" "}
             MÁY CŨ GIÁ RẺ{" "}
-          </Button>
+          </li>
         </HtmlTooltip>
       </div>
-      <div className="flex items-center text-gray-300 absolute ml-[1088px]">
-        <li>
+      <div className="flex items-center text-white absolute ml-[1088px]">
+        <li className="cursor-pointer">
           {" "}
           <FaHouseUser />{" "}
         </li>
-        {/* <Tooltip title={longText}>
-          <Button className="ml-2 mt-1 text-sm" color="inherit">
-            {" "}
-            HÀNG GIA DỤNG{" "}
-          </Button>
-        </Tooltip> */}
         <HtmlTooltip
           title={
             <React.Fragment>
@@ -616,23 +601,17 @@ const Navbar = () => {
             </React.Fragment>
           }
         >
-          <Button className="ml-2 mt-1 text-sm" color="inherit">
+          <li className="text-white text-sm ml-2 mt-1 cursor-pointer">
             {" "}
             HÀNG GIA DỤNG{" "}
-          </Button>
+          </li>
         </HtmlTooltip>
       </div>
-      <div className="flex items-center text-gray-300 absolute ml-[1260px]">
-        <li>
+      <div className="flex items-center text-white absolute ml-[1260px]">
+        <li className="cursor-pointer">
           {" "}
           <FaSimCard />{" "}
         </li>
-        {/* <Tooltip title={longText}>
-          <Button className="ml-2 mt-1 text-sm" color="inherit">
-            {" "}
-            SIM & THẺ{" "}
-          </Button>
-        </Tooltip> */}
         <HtmlTooltip
           title={
             <React.Fragment>
@@ -685,21 +664,20 @@ const Navbar = () => {
             </React.Fragment>
           }
         >
-          <Button className="ml-2 mt-1 text-sm" color="inherit">
+          <li className="text-white text-sm ml-2 mt-1 cursor-pointer">
             {" "}
             SIM & THẺ{" "}
-          </Button>
+          </li>
         </HtmlTooltip>
       </div>
-      <div className="flex items-center text-gray-300 absolute ml-[1390px]">
-        <li>
+      <div className="flex items-center text-white absolute ml-[1390px]">
+        <li className="cursor-pointer">
           {" "}
           <FaStar />{" "}
         </li>
         <HtmlTooltip
           title={
             <React.Fragment>
-              {/* <Typography color="inherit">Tooltip with HTML</Typography> */}
               <div className="list-none text-center text-[16px] w-[250px] bg-white">
                 <li> Thông tin trao thưởng </li>
                 <li> Tất cả khuyến mãi </li>
@@ -707,14 +685,14 @@ const Navbar = () => {
             </React.Fragment>
           }
         >
-          <Button className="ml-2 mt-1 text-sm" color="inherit">
+          <li className="text-white text-sm ml-2 mt-1 cursor-pointer">
             {" "}
             KHUYẾN MÃI{" "}
-          </Button>
+          </li>
         </HtmlTooltip>
       </div>
-      <div className="flex items-center text-gray-300 absolute ml-[1535px]">
-        <li>
+      <div className="flex items-center text-white absolute ml-[1535px]">
+        <li className="cursor-pointer">
           {" "}
           <FaPercent />{" "}
         </li>
@@ -761,10 +739,10 @@ const Navbar = () => {
             </React.Fragment>
           }
         >
-          <Button className="ml-2 mt-1 text-sm" color="inherit">
+          <li className="text-white text-sm ml-2 mt-1 cursor-pointer">
             {" "}
             TRẢ GÓP 0%{" "}
-          </Button>
+          </li>
         </HtmlTooltip>
       </div>
     </div>

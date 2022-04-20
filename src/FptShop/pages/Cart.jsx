@@ -15,8 +15,7 @@ const Cart = () => {
   const handleAdd = (item) => {
     dispatch(addCart(item));
   };
-  const handleDel = (item) => {
-    dispatch(delCart(item));
+  const handleDel = (item) => {    dispatch(delCart(item));
   };
 
   const emptyCart = () => {
@@ -39,15 +38,15 @@ const Cart = () => {
   const cartItems = (product) => {
     return (
       <>
-        <div className="mt-[100px] ml-[90px] relative">
+        <div className="mt-[100px] ml-[331px] relative w-[1300px] h-[155px] border border-white bg-white rounded-lg">
           <div className="">
-            <div className="flex items-center">
+            <div className="flex items-center absolute top-7 left-[180px]">
               {/* <div className="absolute left-[100px]"> */}
               <img
                 src={product.image}
                 alt={product.title}
-                height="50px"
-                width="50px"
+                height="100px"
+                width="100px"
               />
               {/* </div> */}
               <div className="absolute left-[200px]">
@@ -60,7 +59,7 @@ const Cart = () => {
                 >
                   <FaMinus />
                 </button>
-                <span>
+                <span className="ml-7 text-[18px] text-orange-400 font-bold">
                   {product.qty} *{" "}
                   {new Intl.NumberFormat("de-DE", {
                     style: "currency",
@@ -78,24 +77,24 @@ const Cart = () => {
                 >
                   <FaPlus />
                 </button>
-              </div>
-              <div className="absolute flex items-center left-[550px] top-[10px] list-none">
-                <li
-                  className="w-[10px] h-[12px] text-blue-500"
-                  onClick={() => handleDel(product)}
-                >
-                  {" "}
-                  <Link to="/cart">
+                <div className="absolute flex items-center left-[550px] top-[10px] list-none">
+                  <li
+                    className="w-[10px] h-[12px] text-blue-500"
+                    onClick={() => handleDel(product)}
+                  >
                     {" "}
-                    <FaTrash />
-                  </Link>{" "}
-                </li>
-                <li
-                  className="w-[36px] h-[20px] text-[#939CA3] text-[12px] ml-[30px] mt-[10px] absolute cursor-pointer"
-                  onClick={() => handleDel(product)}
-                >
-                  <Link to="/cart"> Xóa</Link>
-                </li>
+                    <Link to="/cart">
+                      {" "}
+                      <FaTrash />
+                    </Link>{" "}
+                  </li>
+                  <li
+                    className="w-[36px] h-[20px] text-[#939CA3] text-[12px] ml-[30px] mt-[10px] absolute cursor-pointer font-bold"
+                    onClick={() => handleDel(product)}
+                  >
+                    <Link to="/cart"> Xóa</Link>
+                  </li>
+                </div>
               </div>
             </div>
           </div>
@@ -115,60 +114,11 @@ const Cart = () => {
     //   const newQuantity = quantity + 1;
     //   setQuantity(newQuantity);
     // };
-    // use react-hook-form
-
-    // const CartSchema = yup.object().shape({
-    //   username: yup
-    //     .string()
-    //     .required("Please enter your username")
-    //     .max(15, "Must be 15 characters or less"),
-    //   // age: yup.number().required().positive().integer(),
-    //   mobilephone: yup
-    //     .string()
-    //     .required("Please enter your mobilephone")
-    //     .max(20, "Must be 20 characters or less"),
-    //   email: yup.string().required("Please enter your email"),
-    // });
-    // const {
-    //   register,
-    //   handleSubmit,
-    //   formState: { errors },
-    // } = useForm({
-    //   resolver: yupResolver(CartSchema),
-    // });
-    // const onSubmit = () => {
-    //   // alert(JSON.stringify(data));
-    // };
-
-    // Modal
-    // const [open, setOpen] = React.useState(false);
-    // const handleOpen = () => {
-    //   setOpen(true);
-    // };
-    // const handleClose = () => {
-    //   setOpen(false);
-    // };
-
-    // Modal
-    // const style = {
-    //   position: "absolute",
-    //   top: "50%",
-    //   left: "50%",
-    //   transform: "translate(-50%, -50%)",
-    //   width: 400,
-    //   bgcolor: "background.paper",
-    //   color: "primary",
-    //   border: "2px solid #000",
-    //   boxShadow: 24,
-    //   pt: 2,
-    //   px: 4,
-    //   pb: 3,
-    // };
     return (
       <>
         <div className="container">
-          <div className="mt-[600px] ml-[100px]">
-            <Button>
+          <div className="absolute top-[1100px] left-[900px] w-[200px] h-[40px] bg-purple-800 text-white flex items-center justify-center cursor-pointer">
+            <Button color="inherit">
               {" "}
               <Link to="/checkout"> Tiến hành đặt hàng</Link>{" "}
             </Button>

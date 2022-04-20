@@ -63,3 +63,15 @@
 .toggle-control > * {
   cursor: pointer;
 }
+.slick-prev::before,
+.slick-next::before {
+  color: red;
+  background: purple;
+  width: 20px;
+  height: 20px;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100rem;
+}

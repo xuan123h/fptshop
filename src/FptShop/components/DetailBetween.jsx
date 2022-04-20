@@ -1,16 +1,16 @@
 import React from "react";
 import Slider from "react-slick";
 const DetailBetween = ({ product }) => {
-  const settings = {
+  var settings = {
     dots: true,
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    speed: 4000,
     autoplaySpeed: 2000,
-    cssEase: "linear",
+    pauseOnHover: true,
   };
+
   return (
     <div className="w-[1360px] h-[1000px] border border-white bg-white ml-[0px] mt-[850px] relative">
       <div>
@@ -27,70 +27,70 @@ const DetailBetween = ({ product }) => {
                 <img
                   src={product.image06}
                   alt={product.name}
-                  className="w-[665px] h-[374px]"
+                  className="w-full h-[374px] object-contain"
                 />
               </div>
               <div>
                 <img
                   src={product.image07}
                   alt={product.name}
-                  className="w-[665px] h-[374px]"
+                  className="w-full h-[374px] object-contain"
                 />
               </div>
               <div>
                 <img
                   src={product.image08}
                   alt={product.name}
-                  className="w-[665px] h-[374px]"
+                  className="w-full h-[374px] object-contain"
                 />
               </div>
               <div>
                 <img
                   src={product.image09}
                   alt={product.name}
-                  className="w-[665px] h-[374px]"
+                  className="w-full h-[374px] object-contain"
                 />
               </div>
               <div>
                 <img
                   src={product.image10}
                   alt={product.name}
-                  className="w-[665px] h-[374px]"
+                  className="w-full h-[374px] object-contain"
                 />
               </div>
               <div>
                 <img
                   src={product.image11}
                   alt={product.name}
-                  className="w-[665px] h-[374px]"
+                  className="w-full h-[374px] object-contain"
                 />
               </div>
               <div>
                 <img
                   src={product.image12}
                   alt={product.name}
-                  className="w-[665px] h-[374px]"
+                  className="w-full h-[374px] object-contain"
                 />
               </div>
               <div>
                 <img
                   src={product.image13}
                   alt={product.name}
-                  className="w-[665px] h-[374px]"
+                  className="w-full h-[374px] object-contain"
                 />
               </div>
               <div>
                 <img
                   src={product.image14}
                   alt={product.name}
-                  className="w-[665px] h-[374px]"
+                  className="w-full h-[374px] object-contain"
                 />
               </div>
               <div>
                 <img
                   src={product.image15}
                   alt={product.name}
-                  className="w-[665px] h-[374px]"
+                  className="w-full h-[374px] object-contain"
                 />
               </div>
             </Slider>

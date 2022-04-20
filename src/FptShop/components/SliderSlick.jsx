@@ -70,12 +70,12 @@ const SliderSlick = () => {
           <img
             src="https://images.fpt.shop/unsafe/fit-in/385x100/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2022/2/14/637804702816759552_F-H2_385x100.png"
             alt=""
-            className="w-full h-full mb-5"
+            className="w-full h-full mb-5 object-cover"
           />
           <img
             src="https://images.fpt.shop/unsafe/fit-in/385x100/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2022/2/14/637804758930519244_Tablet.png"
             alt=""
-            className="w-full h-full mt-[34px]"
+            className="w-full h-full mt-[34px] object-cover"
           />
         </div>
       </div>

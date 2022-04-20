@@ -13,21 +13,30 @@ const Checkout = () => {
   const itemList = (item) => {
     total = total + item.price01 * item.qty;
     return (
-      <div className="flex-wrap w-[400px]">
-        <div className="flex absolute top-[50px] w-[200px]">
-          <img src={item.image} alt={item.name} />
-          <h6 className="absolute left-[220px] top-[20px] w-[300px] font-bold">
-            {" "}
-            {item.name}{" "}
-          </h6>
-          <span className="absolute left-[220px] top-[70px] font-semibold">
-            {" "}
-            {new Intl.NumberFormat("de-DE", {
-              style: "currency",
-              currency: "VND",
-            }).format(item.price01 * item.qty)}{" "}
-          </span>
-        </div>
+      <div>
+        <table>
+          <tbody className="">
+            <tr className="flex items-center w-[400px]">
+              <td>
+                <img src={item.image} alt={item.name} />
+              </td>
+              <td>
+                {" "}
+                <h6>{item.name}</h6>
+              </td>
+              <td>
+                <span>
+                  {new Intl.NumberFormat("de-DE", {
+                    style: "currency",
+                    currency: "VND",
+                  }).format(item.price01 * item.qty)}{" "}
+                </span>
+              </td>
+              <td>{item.qty}</td>
+              <td> Xóa </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     );
   };
@@ -62,7 +71,20 @@ const Checkout = () => {
             Có {state.length} sản phẩm trong giỏ hàng
           </h2>
           <div className="mt-[30px] flex items-center">
-            {state.length !== 0 && state.map(itemList)}
+            <table>
+              <thead>
+                <tr className="">
+                  <th className="float-left"> Sản Phẩm </th>
+                  <th> Tên </th>
+                  <th> Giá </th>
+                  <th> Số Lượng </th>
+                  <th> Chọn </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>{state.length !== 0 && state.map(itemList)}</tr>
+              </tbody>
+            </table>
           </div>
           <div className="mt-[60px] flex items-center absolute left-[900px]">
             <div>
@@ -166,7 +188,7 @@ const Checkout = () => {
                 HOÀN TẤT ĐẶT HÀNG
               </button>
             </Link>
-            <p className="w-[776px] h-[20px] text-[#939CA3] text-[14px] absolute top-[158px] left-[100px] font-semibold">
+            <p className="w-[776px] h-[20px] text-[#939CA3] text-[14px] absolute top-[358px] left-[100px] font-semibold">
               {" "}
               Bằng cách đặt hàng, bạn đồng ý với Điều khoản sử dụng của FPTShop{" "}
             </p>
